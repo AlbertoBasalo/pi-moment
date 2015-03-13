@@ -15,7 +15,7 @@
 					} else {
 						pi.delta = pi.localTime.getTime() - pi.moment.getTime();
 					}
-					pi.deltaSeconds = pi.delta / 1000;
+					pi.deltaSeconds = ((24 * 60 * 60) -pi.delta) / 1000;
 					pi.progress = pi.deltaSeconds / (24 * 60 * 60);
 				});
 			});
