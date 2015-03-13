@@ -1,0 +1,29 @@
+{
+  "name": "pi-moment",
+  "version": "3.14.15",
+  "description": "pi moment real time app with nodejs and angularjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AcademiaBinaria/pi-moment"
+  },
+  "keywords": [
+    "pi",
+    "piday",
+    "pimoment"
+  ],
+  "author": "Alberto Basalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AcademiaBinaria/pi-moment/issues"
+  },
+  "homepage": "https://github.com/AcademiaBinaria/pi-moment",
+  "dependencies": {
+    "express": "^4.12.2",
+    "socket.io": "^1.3.5"
+  }
+}
