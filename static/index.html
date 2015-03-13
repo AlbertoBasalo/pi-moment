@@ -18,18 +18,21 @@
 	</div>
 	<article>
 		<div class="col-md-6">
-			<h1>* Ahora:<span class="label label-info pull-right" ng-class="">{{pi.localTime | date:'M dd yy H mm ss'}}</span></h1>
+			<h1>* Ahora:<span class="label label-primary pull-right" ng-class="">{{pi.localTime | date:'M dd yy H mm ss'}}</span></h1>
 			<span class="small">{{pi.localTime | date:'medium' }}</span>
 		</div>
 		<div class="col-md-6">
-			<h1>* Delta:<span class="label label-warning pull-right" ng-class="">{{pi.delta | date:'H:mm:ss'}}</span></h1>
+			<h1>* Delta:<span class="label pull-right" 
+			ng-class="{'label-info': pi.deltaSeconds<86400, 'label-warning':pi.deltaSeconds<3600, 'label-danger':pi.deltaSeconds<60}">{{pi.delta | date:'H:mm:ss'}}</span></h1>
 			<span class="small">{{pi.delta}}	segundos...</span>
 		</div>
 	</article>
 	<p>
 	<span>Esta barra representa un día</span>
 	<div class="progress">
-		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{pi.deltaSeconds}}" aria-valuemin="0" aria-valuemax="{{86400}}" ng-style="{width : ( pi.progress + '%' ) }">
+		<div class="progress-bar " 
+		ng-class="{'progress-bar-info': pi.deltaSeconds<86400, 'progress-bar-warning':pi.deltaSeconds<3600, 'progress-bar-danger':pi.deltaSeconds<60}"
+		role="progressbar" aria-valuenow="{{pi.deltaSeconds}}" aria-valuemin="0" aria-valuemax="{{86400}}" ng-style="{width : ( pi.progress + '%' ) }">
 		</div>
 	</div>
 	
