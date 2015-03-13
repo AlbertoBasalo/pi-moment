@@ -12,5 +12,5 @@
 		io.sockets.emit('time', { time: new Date() });
 	}, 1000);
 	var port = process.env.PORT || 3000;
-	server.listen(port);
+	server.listen(3000);
 }());
