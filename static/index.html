@@ -23,7 +23,7 @@
 		</div>
 		<div class="col-md-6">
 			<h1>* Delta:<span class="label pull-right" 
-			ng-class="{'label-info': pi.deltaSeconds<86400, 'label-warning':pi.deltaSeconds<3600, 'label-danger':pi.deltaSeconds<60}">{{pi.delta | date:'HH:mm:ss'}}</span></h1>
+			ng-class="{'label-info': pi.deltaSeconds<86400, 'label-warning':pi.deltaSeconds<3600, 'label-danger':pi.deltaSeconds<60}">{{pi.delta | date:"mm:ss"}}</span></h1>
 			<span class="small">{{pi.deltaSeconds | number:0}}	segundos...</span>
 		</div>
 	</article>
